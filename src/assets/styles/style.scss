@@ -1,0 +1,117 @@
+@import "./variables/variables.scss";
+@import "./variables/reset.scss";
+@import "./blocks/header.scss";
+@import "./blocks/mobileHeader.scss";
+@import "./blocks/dropmenu.scss";
+@import "./blocks/content.scss";
+@import "./blocks/footer.scss";
+
+* {
+    font-family: $MyFont;
+    font-size: $MyFontSize;
+    color: $TextColor;
+}
+
+body {
+    width: 100%;
+    min-width: 350px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 14px;
+    position: relative;
+
+    &.no-scroll {
+        overflow: hidden;
+    }
+}
+
+.link {
+    cursor: pointer;
+    transition: all 0.5ms;
+    font-size: 14px;
+
+    & svg path {
+        fill: $HoverLinkColor;
+    }
+
+    &:hover {
+        color: $HoverLinkColor;
+
+    }
+
+    &.active {
+        color: $HoverLinkColor;
+        cursor: default;
+    }
+
+    &__tel {
+        font-size: 22px;
+        font-weight: 600;
+    }
+
+    &__address {
+        position: relative;
+        white-space: nowrap;
+    }
+
+    &__email {
+        position: relative;
+        white-space: nowrap;
+    }
+
+    &__address-hint {
+        position: absolute;
+        transform: translate(-100%, -100%);
+        padding: 5px;
+        background: $ButtonTextColor;
+        border: 1px solid $BorderColor;
+        border-radius: 5px;
+        z-index: 2;
+        display: none;
+
+        &.active {
+            display: block;
+        }
+    }
+
+    &__email-hint {
+        position: absolute;
+        transform: translate(-100%, -100%);
+        padding: 5px;
+        background: $ButtonTextColor;
+        border: 1px solid $BorderColor;
+        border-radius: 5px;
+        z-index: 2;
+        display: none;
+
+        &.active {
+            display: block;
+        }
+    }
+}
+
+.btn {
+    border-radius: 0.5rem;
+    box-shadow: 0px 2px 4px 0px rgba(34, 60, 80, 0.3);
+    background: -webkit-linear-gradient(180deg, $OrangeLightGradient, $OrangeDarkGradient);
+    background: -moz-linear-gradient(180deg, $OrangeLightGradient, $OrangeDarkGradient);
+    background: linear-gradient(180deg, $OrangeLightGradient, $OrangeDarkGradient);
+    cursor: pointer;
+    color: $ButtonTextColor;
+    text-shadow: 0px 2px 3px rgba(0, 0, 0, .3);
+    font-size: 14px;
+
+    &:hover {
+        background: -webkit-linear-gradient(180deg, $BlueLightGradient, $BlueLightGradient);
+        background: -moz-linear-gradient(180deg, $BlueLightGradient, $BlueLightGradient);
+        background: linear-gradient(180deg, $BlueLightGradient, $BlueLightGradient);
+    }
+}
+
+.container {
+    max-width: 1280px;
+    width: 100%;
+
+}

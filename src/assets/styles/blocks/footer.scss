@@ -1,0 +1,92 @@
+.foot {
+    width: 100%;
+    background: $BackgroundColor;
+    padding: 2rem 3rem 3rem 3rem;
+    display: flex;
+    justify-content: center;
+
+    @media (max-width: 1000px) {
+        padding: 2rem 2rem;
+    }
+
+    @media (max-width: 700px) {
+        padding: 1rem 1rem;
+    }
+
+    &__cont {
+        width: 100%;
+        display: grid;
+        align-items: flex-start;
+        justify-content: space-between;
+        grid-template-columns: repeat(4, 220px);
+        grid-gap: 20px;
+
+        @media (max-width: 1040px) {
+            justify-content: space-around;
+            grid-template-columns: repeat(2, 250px);
+        }
+
+        @media (max-width: 570px) {
+            justify-content: center;
+            grid-template-columns: repeat(1, 100%);
+        }
+    }
+
+    &__section-title {
+        font-size: 16px;
+        font-weight: 600;
+        padding: 10px 0;
+        border-bottom: 1px solid $BorderColor;
+
+        @media (max-width: 570px) {
+            text-align: center;
+        }
+    }
+
+    &__section-list {
+        margin-top: 10px;
+
+        @media (max-width: 570px) {
+            text-align: center;
+        }
+    }
+
+    &__section-logo {
+
+        @media (max-width: 570px) {
+            display: flex;
+            justify-content: center;
+        }
+    }
+
+    &__section-item {
+        margin-top: 3px;
+    }
+
+    &__section-contacts {
+        margin-top: 5px;
+    }
+
+}
+
+.copyrait {
+    width: 100%;
+    border-top: 1px solid rgba($BorderColor, 0.5);
+    display: flex;
+    justify-content: center;
+    background: $BackgroundColor;
+    padding: 7px 3rem;
+
+    @media (max-width: 1000px) {
+        padding: 7px 2rem;
+    }
+
+    @media (max-width: 700px) {
+        padding: 7px 1rem;
+    }
+
+    &__content {
+        font-size: 11px;
+        color: rgba($TextColor, 0.5);
+    }
+}
